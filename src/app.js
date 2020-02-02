@@ -24,6 +24,7 @@ app.use((error, req, res, next) => {
     console.log(error);
     response = { message: error.message, error };
   }
+  res.status(500).send(response);
 });
 
 app.get('/', (req, res) => {
